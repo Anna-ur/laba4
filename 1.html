@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>лаба4</title>
+		<script>
+		function sayHello()
+		{
+			alert( "Hello World" );
+		}
+		function summa2(){
+			let x=Math.random();
+			let y=Math.random();
+			let z;
+			z=x+y;
+			alert(x+"+"+y+"="+z);
+		}
+		function summa3(){
+			let x=Math.random();
+			let y=Math.random();
+			let s=Math.random();
+			let z;
+			z=x+y+s;
+			alert(x+"+"+y+"+"+s+"="+z);
+		}
+		function delenie(){
+			let x=2;
+			let y="Привет";
+			alert(x+"/"+y+"="+x/y);
+		}
+		function summaStrok(){
+			let x="Привет";
+			let y=",м";
+			let s="ир!";
+			alert(x+"+"+y+"+"+s+"="+(x+y+s));
+		}
+		function neopr(){
+			let x;
+			alert(x);
+		}
+		function preobr(){
+			let x=false;
+			alert(x);
+			toString(x);
+			alert(x);
+			y=typeof(x);
+			alert(y);
+
+			x='1000';
+			y='10';
+			z=x/y;
+			alert(x+"/"+y+"="+z);
+			s=typeof(z);
+			alert(s);
+
+			x='777';
+			y=333;
+			z=x+y;
+			alert(x+"+"+y+"="+z);
+		}
+		function kvadrat(){
+			let a=1;
+			let b=4;
+			let c=-1;
+			let d=b*b-4*a*c;
+			let x1;
+			let x2;
+			x1=(-b+Math.sqrt(d))/(2*a);
+			x2=(-b-Math.sqrt(d))/(2*a);
+			alert(x1+";"+x2);
+		}
+		function taby(){
+			alert("Диапазон от 1 до 10"); 
+            alert("Шаг 1"); 
+            for (let x=1; x<11; x++){ 
+            y=x*x+x*x*x-3*x; 
+            alert ("Значения функции " + y);
+            }  
+		}
+		function mAssiv(){
+			let arr=[]; 
+            for(let i=0; i<5; i++){ 
+            arr[i]=Math.random()*(10-1)+1 
+            } 
+            b=0; 
+            for(var i=0; i<5; i++){ 
+            b+=arr[i]*arr[i]; 
+            alert(b);
+            } 
+		}
+		function dwoich(){
+			let x=24;
+			alert(x);
+			alert(x.toString([2]));
+		}
+		function kol(){                                
+			let a=['альпинист', 'Барабан', 'Гора'];
+			let b=0;
+			alert('альпинист'+","+ 'Барабан'+","+ 'Гора');
+			for (let i=0; i<3; i++){
+				for (let n=0; n<=a[i].length; n++){
+					if (a[i].charAt(n)=="а") b+=1;
+				}
+			}
+			alert(b);
+		}
+		function spis(){
+			alert("Иванов Иван, Петров Пётр, Ульянова Ульяна");
+			let a=[];
+			let s=["Иванов Иван, Петров Пётр, Ульянова Ульяна, 1"];
+			let d;                                                    
+			for (let i=0;;i++) {
+				a[i]=s[i].slice(0,s[i].indexOf(','));
+	            s[i+1]=s[i].slice(s[i].indexOf(',')+1,s[i].indexOf('1')); //копирование в другую строку начиная с след слова
+	            if (s[i+1].length<4) break
+	            d=i;
+                }
+                for (let i=0;i<=d+1;i++){
+                  alert(a[i]);
+                }
+		}
+		function polz(){
+			let x=("Привет, мир!");
+			alert(x);
+		}
+		function proverc(){
+			x='777';
+			proverc2();}
+			function proverc2(){
+				x='333';
+				alert(x);
+			}
+			function proverc3 (d,r){                          
+            return d+r;
+            }
+		function vec16(){  
+		alert(proverc3(2,3));      
+		}
+	</script>
+
+</head>
+<body>
+<form>
+<input value='Задание 1' onclick='sayHello()' type='button' ><br> 
+<input value='Задание 2' onclick="summa2()" type='button' ><br> 
+<input value='Задание 3' onclick="summa3()" type='button' ><br> 
+<input value='Задание 4' onclick="delenie()" type='button' ><br> 
+<input value='Задание 5' onclick="summaStrok()" type='button' ><br> 
+<input value='Задание 6' onclick="neopr()" type='button' ><br> 
+<input value='Задание 7' onclick="preobr()" type='button' ><br> 
+<input value='Задание 8' onclick="kvadrat()" type='button' ><br> 
+<input value='Задание 9' onclick="taby()" type='button' ><br> 
+<input value='Задание 10' onclick="mAssiv()" type='button' ><br>
+<input value='Задание 11' onclick="dwoich()" type='button' ><br>
+<input value='Задание 12' onclick="kol()" type='button' ><br>
+<input value='Задание 13' onclick="spis()" type='button' ><br>
+<input value='Задание 14' onclick="polz()" type='button' ><br>
+<input value='Задание 15' onclick="proverc2()" type='button' ><br>
+<input value='Задание 16' onclick="vec16()" type='button' ><br>
+</form>
+</body>
+</html>
